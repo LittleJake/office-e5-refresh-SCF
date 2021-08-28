@@ -21,9 +21,9 @@
 
 2. 解压`main.zip`，找到`token.txt`，填入refresh_token
 
-3. 获取refresh_token参考：[获取微软Office 365应用APPID、secret、access_token、refresh_token等](https://blog.littlejake.net/archives/481/)
+3. 获取refresh_token参考：[获取微软Office 365应用APPID、secret、access_token、refresh_token等](https://blog.littlejake.net/archives/481/)，视频教程：[AutoApi教程](https://www.bilibili.com/video/av95688306/)
 
-4. 打开云函数页面：https://console.cloud.tencent.com/scf/list-create，新建函数
+4. 打开云函数页面：[https://console.cloud.tencent.com/scf/list-create](https://console.cloud.tencent.com/scf/list-create)，新建函数
 
    ![模板1](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828210618.png)
 
