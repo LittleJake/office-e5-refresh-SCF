@@ -7,6 +7,7 @@
 import requests as req
 import redis
 import json,sys,time,os,random
+from urls import *
 
 num = 0
 path = os.getcwd() + r'/token.txt'
@@ -55,41 +56,19 @@ def add_count(type=""):
     time.sleep(random.randint(0,10))
 
 def main():
-    print("任务开始")
     time.sleep(random.randint(0,30))
     access_token = load_token()
     localtime = time.asctime(time.localtime(time.time()))
     headers={'Authorization':access_token,'Content-Type':'application/json'}
     try:
-        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root',headers=headers).status_code == 200:
-            add_count("drive/root")
-        if req.get(r'https://graph.microsoft.com/v1.0/me/drive',headers=headers).status_code == 200:
-            add_count("me/drive")
-        if req.get(r'https://graph.microsoft.com/v1.0/drive/root',headers=headers).status_code == 200:
-            add_count("drive/root")
-        if req.get(r'https://graph.microsoft.com/v1.0/users ',headers=headers).status_code == 200:
-            add_count("users")
-        if req.get(r'https://graph.microsoft.com/v1.0/me/messages',headers=headers).status_code == 200:
-            add_count("me/messages") 
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/inbox/messageRules',headers=headers).status_code == 200:
-            add_count("me/mailFolders/inbox/messageRules")  
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders/Inbox/messages/delta',headers=headers).status_code == 200:
-            add_count("me/mailFolders/Inbox/messages/delta")
-        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/root/children',headers=headers).status_code == 200:
-            add_count("me/drive/root/children")
-        if req.get(r'https://api.powerbi.com/v1.0/myorg/apps',headers=headers).status_code == 200:
-            add_count("myorg/apps")
-        if req.get(r'https://graph.microsoft.com/v1.0/me/mailFolders',headers=headers).status_code == 200:
-            add_count("me/mailFolders")
-        if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
-            add_count("me/outlook/masterCategories")
-        
-        print('此次运行结束时间为 :', localtime)
+        for name,url in urls:
+            if req.get(v,headers=headers).status_code == 200:
+                add_count(name)
     except:
-        print("pass")
         pass
         
 def main_handler(event, context):
+    print("任务开始")
     for _ in range(3):
         main()
-
+    print('此次运行结束时间为 :', localtime)
