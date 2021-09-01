@@ -60,7 +60,7 @@ def main():
     access_token = load_token()
     headers={'Authorization':access_token,'Content-Type':'application/json'}
     try:
-        for name,url in urls:
+        for name,url in urls.items():
             if req.get(url,headers=headers).status_code == 200:
                 add_count(name)
     except:
