@@ -68,7 +68,7 @@ def main():
         
 def main_handler(event, context):
     print("任务开始")
-    for _ in range(3):
+    for _ in range(random.randint(1,3)):
         main()
     localtime = time.asctime(time.localtime(time.time()))
     print('此次运行结束时间为 :', localtime)
