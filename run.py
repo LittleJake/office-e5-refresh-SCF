@@ -58,7 +58,6 @@ def add_count(type=""):
 def main():
     time.sleep(random.randint(0,30))
     access_token = load_token()
-    localtime = time.asctime(time.localtime(time.time()))
     headers={'Authorization':access_token,'Content-Type':'application/json'}
     try:
         for name,url in urls:
@@ -71,4 +70,5 @@ def main_handler(event, context):
     print("任务开始")
     for _ in range(3):
         main()
+    localtime = time.asctime(time.localtime(time.time()))
     print('此次运行结束时间为 :', localtime)
