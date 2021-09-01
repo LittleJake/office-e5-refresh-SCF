@@ -61,7 +61,7 @@ def main():
     headers={'Authorization':access_token,'Content-Type':'application/json'}
     try:
         for name,url in urls:
-            if req.get(v,headers=headers).status_code == 200:
+            if req.get(url,headers=headers).status_code == 200:
                 add_count(name)
     except:
         pass
