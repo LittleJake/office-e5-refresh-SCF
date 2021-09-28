@@ -61,6 +61,8 @@
 
 #### 使用shell脚本运行
 
+> 可以加入到crontab定时执行。
+
 ```bash
    git clone https://github.com/LittleJake/office-e5-refresh-SCF/
    cd office-e5-refresh-SCF
