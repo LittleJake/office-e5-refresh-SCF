@@ -9,13 +9,22 @@
 
 ## Requirement
 
-1. 需要Redis保存refresh_token（可以注册Redislab获取30MB的免费redis服务器）
+### 云函数
 
-2. 腾讯云开启云函数功能（拥有免费配额）
+- 需要Redis保存refresh_token（可以注册Redislab获取30MB的免费redis服务器）
+
+- 腾讯云开启云函数功能（拥有免费配额）
+
+### Linux
+
+- 支持`cURL`
 
 
+## 脚本配置
 
-## 配置教程
+### 云函数
+
+#### 配置教程
 
 1. 下载代码zip包：[main.zip](https://github.com/LittleJake/office-e5-refresh-SCF/archive/refs/heads/main.zip)
 
@@ -43,22 +52,33 @@
 
    ![模板3](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828211214.png)
 
-## 运行截图
+#### 云函数运行截图
 
 ![运行](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828211457.png)
 
 
+### Linux主机
+
+#### 使用shell脚本运行
+
+```bash
+   git clone https://github.com/LittleJake/office-e5-refresh-SCF/
+   cd office-e5-refresh-SCF
+   bash run.sh
+```
+
+#### shell脚本运行截图
+
+![运行](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210928221336.png)
 
 ## 感谢
 
 @ZYong9908
 
 
-
 ## 开源协议
 
 [Apache2.0](LICENSE)
-
 
 
 ## PS

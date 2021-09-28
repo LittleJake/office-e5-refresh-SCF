@@ -5,16 +5,11 @@
 #mail:  Mail.Read、Mail.ReadWrite、MailboxSettings.Read、MailboxSettings.ReadWrite
 #注册后一定要再点代表xxx授予管理员同意,否则outlook api无法调用
 import requests as req
-import redis
 import json,sys,time,os,random
 from urls import *
 
 num = 0
 path = os.getcwd() + r'/token.txt'
-REDIS_HOST = os.environ.get('redis_host')
-REDIS_PORT = int(os.environ.get('redis_port'))
-REDIS_PASSWORD = os.environ.get('redis_password')
-
 def update_token(refresh_token):
     headers={'Content-Type':'application/x-www-form-urlencoded'}
     data= {'grant_type': 'refresh_token',
@@ -34,6 +29,10 @@ def load_token():
         refresh_token = fo.read()
 
     try:
+        REDIS_HOST = os.environ.get('redis_host', '')
+        REDIS_PORT = int(os.environ.get('redis_port', 0))
+        REDIS_PASSWORD = os.environ.get('redis_password', '')
+        import redis
         with redis.Redis(host=REDIS_HOST,port=REDIS_PORT,password=REDIS_PASSWORD) as red:
             if red.exists(os.environ.get('client_id')):
                 refresh_token = red.get(os.environ.get('client_id'))
@@ -45,8 +44,15 @@ def load_token():
             return access_token
     except Exception as e:
         print(e)
-        print("连接Redis出错，尝试使用原refresh_token")
+        print("连接Redis出错，尝试使用本地refresh_token")
         access_token, refresh_token = update_token(refresh_token)
+        try:
+            with open(path, "w") as fo:
+                fo.write(refresh_token)
+            print("尝试保存refresh_token到文件")
+        except Exception as e:
+            print(e)
+            print("保存refresh_token到文件错误")
         return access_token
 
 def add_count(type=""):
