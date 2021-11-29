@@ -40,7 +40,8 @@
    #注册后一定要再点代表xxx授予管理员同意,否则outlook api无法调用
    ```
 
-4. 打开云函数页面：[https://console.cloud.tencent.com/scf/list-create](https://console.cloud.tencent.com/scf/list-create)，新建函数
+4. 打开云函数页面：[https://console.cloud.tencent.com/scf/list-create](https://console.cloud.tencent.com/scf/list-create) ，新建函数。
+   > **为了提高访问稳定性，地域选择中国香港**
 
    ![模板1](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828210618.png)
 
@@ -51,6 +52,15 @@
    打开触发配置：
 
    ![模板3](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828211214.png)
+
+#### RedisLab相关参数
+
+* RedisLab服务器信息（域名和端口）
+ ![RedisLab](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202111300019368.png)
+* RedisLab服务器信息（连接密码）
+ ![RedisLab](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202111300021201.png)
+
+
 
 #### 云函数运行截图
 
