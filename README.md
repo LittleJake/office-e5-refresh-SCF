@@ -43,28 +43,28 @@
 4. 打开云函数页面：[https://console.cloud.tencent.com/scf/list-create](https://console.cloud.tencent.com/scf/list-create) ，新建函数。
    > **为了提高访问稳定性，地域选择中国香港**
 
-   ![模板1](https://static.littlejake.net/imgs/imgs/20210828210618.png)
+   ![模板1](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828210618.png)
 
    打开高级配置：
 
-   ![高级配置](https://static.littlejake.net/imgs/imgs/20210828210929.png)
+   ![高级配置](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828210929.png)
 
    打开触发配置：
 
-   ![模板3](https://static.littlejake.net/imgs/imgs/20210828211214.png)
+   ![模板3](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828211214.png)
 
 #### RedisLab相关参数
 
 * RedisLab服务器信息（域名和端口）
- ![RedisLab](https://static.littlejake.net/imgs/imgs/202111300019368.png)
+ ![RedisLab](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202111300019368.png)
 * RedisLab服务器信息（连接密码）
- ![RedisLab](https://static.littlejake.net/imgs/imgs/202111300021201.png)
+ ![RedisLab](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202111300021201.png)
 
 
 
 #### 云函数运行截图
 
-![运行](https://static.littlejake.net/imgs/imgs/20210828211457.png)
+![运行](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210828211457.png)
 
 
 ### Linux主机
@@ -79,11 +79,11 @@
    bash e5_refresh.sh
 ```
 
-![shell配置](https://static.littlejake.net/imgs/imgs/202205262243679.png)
+![shell配置](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202205262243679.png)
 
 ##### shell脚本运行截图
 
-![运行](https://static.littlejake.net/imgs/imgs/20210928221336.png)
+![运行](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/20210928221336.png)
 
 #### 使用青龙面板
 
@@ -97,13 +97,13 @@ docker exec -it qinglong ql raw https://raw.fastgit.org/LittleJake/office-e5-ref
 
 登录到青龙面板 - 脚本管理，找到对应脚本编辑，填入信息后保存。
 
-![青龙配置](https://static.littlejake.net/imgs/imgs/202205262248082.png)
+![青龙配置](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202205262248082.png)
 
-![配置随机延迟](https://static.littlejake.net/imgs/imgs/202205262300305.png)
+![配置随机延迟](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202205262300305.png)
 
 ##### 青龙脚本运行截图
 
-![运行](https://static.littlejake.net/imgs/imgs/202205262252116.png)
+![运行](https://cdn.jsdelivr.net/gh/LittleJake/blog-static-files@imgs/imgs/202205262252116.png)
 
 ## 感谢
 
