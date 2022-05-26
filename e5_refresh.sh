@@ -1,4 +1,5 @@
 #!/bin/bash
+# 15 12 * * * e5_refresh.sh
 # 先注册azure应用,确保应用有以下权限:
 # files:	Files.Read.All、Files.ReadWrite.All、Sites.Read.All、Sites.ReadWrite.All
 # user:	User.Read.All、User.ReadWrite.All、Directory.Read.All、Directory.ReadWrite.All
